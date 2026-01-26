@@ -2,6 +2,17 @@
 <html lang="en">
 
 <head>
+    <!-- PERFORMANCE: Resource hints for faster loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- PERFORMANCE: Preload critical resources -->
+    <link rel="preload" href="assets/vendors/bootstrap/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/css/mediox.css" as="style">
+    <link rel="preload" href="assets/vendors/jquery/jquery-3.7.0.min.js" as="script">
+
        <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr Hany Abdel Gawaad</title>
@@ -10,36 +21,63 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="CISC" /><link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+    <meta name="description" content="CISC" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
     
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
-    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
-    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
-    <link rel="stylesheet" href="assets/vendors/mediox-icons/style.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="assets/vendors/slick/css/slick.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/mediox-icons/style.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/slick/css/slick.css"  media="print" onload="this.media='all'" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/mediox.css" />
+
+    <!-- PERFORMANCE: Inline critical CSS for faster rendering -->
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+        }
+        .preloader { 
+            position: fixed; 
+            width: 100%; 
+            height: 100%; 
+            background: #fff; 
+            z-index: 9999; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .main-header { 
+            position: relative; 
+            z-index: 100;
+        }
+        img { 
+            max-width: 100%; 
+            height: auto;
+        }
+    </style>
+    <noscript>
+        <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+        <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+        <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    </noscript>
+
 </head>
 
 <body class="custom-cursor">
@@ -162,7 +200,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='000ms'>
                             <div class="blog-card-two__image">
-                                <img src="assets/images/hany/blogs/1.avif" alt="cupidatat nonproident, sunt in culpa qui official of">
+                                <img src="assets/images/hany/blogs/1.avif" alt="cupidatat nonproident, sunt in culpa qui official of" loading="lazy">
                                 <a href="blog2.html" class="blog-card-two__hover">
                                     <span class="sr-only">cupidatat nonproident, sunt in culpa qui official of</span>
                                     <span class="blog-card-two__hover__box blog-card-two__hover__box--1"></span>
@@ -184,7 +222,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="blog-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                             <div class="blog-card-two__image">
-                                <img src="assets/images/hany/blogs/2.avif" alt="Nail jelly to the hothouse wall pixel pushing c-suite">
+                                <img src="assets/images/hany/blogs/2.avif" alt="Nail jelly to the hothouse wall pixel pushing c-suite" loading="lazy">
                                 <a href="blog2.html" class="blog-card-two__hover">
                                     <span class="sr-only">Nail jelly to the hothouse wall pixel pushing c-suite</span>
                                     <span class="blog-card-two__hover__box blog-card-two__hover__box--1"></span>
@@ -207,7 +245,7 @@
                   <div class="col-md-6 col-lg-4">
                         <div class="blog-card-two wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms'>
                             <div class="blog-card-two__image">
-                                <img src="assets/images/hany/blogs/2.avif" alt="Nail jelly to the hothouse wall pixel pushing c-suite">
+                                <img src="assets/images/hany/blogs/2.avif" alt="Nail jelly to the hothouse wall pixel pushing c-suite" loading="lazy">
                                 <a href="blog2.html" class="blog-card-two__hover">
                                     <span class="sr-only">Nail jelly to the hothouse wall pixel pushing c-suite</span>
                                     <span class="blog-card-two__hover__box blog-card-two__hover__box--1"></span>
@@ -245,7 +283,7 @@
                             <div class="footer-widget__logo logo-retina">
                                 <a href="index.html">
                                     <img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" alt="Mediox HTML"
-                                        width="164">
+                                        width="164" loading="lazy">
                                 </a>
                             </div><!-- /.footer-widget__logo -->
                             <p class="footer-widget__about-text">Morem Ipsum Dolor Sit Amet, Consectetur Adipiscing
@@ -334,7 +372,7 @@
                                         <p class="main-footer__contact__title">send email</p>
                                         <h4 class="main-footer__contact__text">
                                             <i class="fa-solid fa-location-dot"></i>
-                                            <a href="mailto:info@gmail.com">Be@gmail.com</a>
+                                            <a href="/cdn-cgi/l/email-protection#3a53545c557a5d575b535614595557"><span class="__cf_email__" data-cfemail="7b391e3b1c161a121755181416">[email&#160;protected]</span></a>
                                         </h4>
                                     </div><!-- /.main-footer__contact__content -->
                                 </div><!-- /.main-footer__contact -->
@@ -370,7 +408,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="icon-close"></i></span>
 
             <div class="logo-box logo-retina">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png"" width="164" alt="" /></a>
+                <a href="index.html" aria-label="logo image"><img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png"" width="164" alt="" / loading="lazy"></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -381,7 +419,7 @@
                     <span class="mobile-nav__contact__icon">
                         <i class="fa fa-envelope"></i>
                     </span>
-                    <a href="mailto:Be@gmail.com">Be@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#da98bf9abdb7bbb3b6f4b9b5b7"><span class="__cf_email__" data-cfemail="33715673545e525a5f1d505c5e">[email&#160;protected]</span></a>
                 </li>
                 <li>
                     <span class="mobile-nav__contact__icon">
@@ -431,7 +469,7 @@
         <div class="sidebar-one__content">
             <span class="sidebar-one__close sidebar-btn__toggler"><i class="fa-solid fa-circle-xmark"></i></span>
             <div class="sidebar-one__logo sidebar-one__item logo-retina">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" width="164" alt="logo" />
+                <a href="index.html" aria-label="logo image"><img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" width="164" alt="logo" / loading="lazy">
                 </a>
             </div><!-- /.sidebar-one__logo -->
             <div class="sidebar-one__about sidebar-one__item">
@@ -451,7 +489,7 @@
                         <span class="sidebar-one__info__icon">
                               <i class="fa fa-envelope"></i>
                         </span>
-                        <a href="mailto:Be@gmail.com">Be@gmail.com</a>
+                        <a href="/cdn-cgi/l/email-protection#7f3d1a3f18121e1613511c1012"><span class="__cf_email__" data-cfemail="81c3e4c1e6ece0e8edafe2eeec">[email&#160;protected]</span></a>
                     </li>
                     <li>
                         <span class="sidebar-one__info__icon">
@@ -495,29 +533,19 @@
         <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
     </a>
 
-    <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
-    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="assets/vendors/slick/js/slick.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
-    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
-    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
-    <!-- template js -->
-    <script src="assets/js/mediox.js"></script>
-</body>
-
-</html>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+    <script defer src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script defer src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script defer src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script defer src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script defer src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script defer src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script defer src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script defer src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script defer src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script defer src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script defer src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script defer src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script defer src="assets/vendors/slick/js/slick.min.js"></script>
+    <script defer src="assets/vendors/wow/wow.js"></script>
