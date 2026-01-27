@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- PERFORMANCE: Resource hints for faster loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube.com">
+
+    
+    <!-- PERFORMANCE: Preload critical resources -->
+    <link rel="preload" href="assets/vendors/bootstrap/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/vendors/jquery/jquery-3.7.0.min.js" as="script">
+
        <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dr Hany Abdel Gawaad</title>
@@ -10,36 +23,64 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="CISC" /><link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
-
+    <meta name="description" content="Educational videos about spine surgery procedures and patient success stories." /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://www.youtube.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
-    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
-    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css" />
-    <link rel="stylesheet" href="assets/vendors/mediox-icons/style.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="assets/vendors/slick/css/slick.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/mediox-icons/style.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css"  media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/vendors/slick/css/slick.css"  media="print" onload="this.media='all'" />
 
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- PERFORMANCE: Inline critical CSS for faster rendering -->
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+        }
+        .preloader { 
+            position: fixed; 
+            width: 100%; 
+            height: 100%; 
+            background: #fff; 
+            z-index: 9999; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+        }
+        .main-header { 
+            position: relative; 
+            z-index: 100;
+        }
+        img { 
+            max-width: 100%; 
+            height: auto;
+        }
+    </style>
+    <noscript>
+        <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
+        <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
+        <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
+    </noscript>
+
 </head>
 
 <body class="custom-cursor">
@@ -47,7 +88,7 @@
     <div class="custom-cursor__cursor"></div>
     <div class="custom-cursor__cursor-two"></div>
 
-      <div class="preloader">
+     <div class="preloader">
         <div class="loader" >
             <span></span>
   <span></span>
@@ -55,18 +96,16 @@
         </div>
     </div>
     <!-- /.preloader -->
-    <div class="page-wrapper about-me">
+    <div class="page-wrapper">
 
 
-
-
-
-        <header style="margin-bottom: 100px;" class="main-header main-header--two sticky-header sticky-header--normal about-me">
+   
+  <header  class="main-header main-header--two sticky-header sticky-header--normal about-me">
             <div class="container-fluid">
                 <div class="main-header__inner">
                     <div class="main-header__logo logo-retina">
                         <a href="index.html">
-                            <img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" alt="DR Hany HTML" width="164">
+                            <img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" alt="DR Hany HTML" width="164" fetchpriority="high" height="164">
                         </a>
                     </div><!-- /.main-header__logo -->
                     <div class="main-header__right">
@@ -136,19 +175,19 @@
                 </div><!-- /.main-header__inner -->
             </div><!-- /.container-fluid -->
         </header><!-- /.main-header -->
-        <section class="page-header" style="margin-top: 150px;">
+        <section class="page-header "style="margin-top: 150px;">
             <div class="container-fluid">
                 <div class="page-header__inner">
-                    <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/slide.jpg);"></div><!-- /.page-header__bg -->
+                    <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/slider.jpg);"></div><!-- /.page-header__bg -->
                     <div class="container">
                         <div class="page-header__content">
-                            <h2 class="page-header__title">About us</h2>
+                            <h2 class="page-header__title">Our Gallery</h2>
                             <ul class="mediox-breadcrumb list-unstyled">
                                 <li>
-                                    <i class="fa-solid fa-house" style="padding-right:10px;"></i><a href="index.html">Home</a>
-                                
+                                    <span class="mediox-breadcrumb__icon"> <i class="fa-solid fa-house" style="padding-right:10px;"></i></span>
+                                    <a href="index.html">Home</a>
                                 </li>
-                                <li><i style="padding: 0px 10px 0px 10px" class="fa-solid fa-angle-right"></i><span>About us</span></li>
+                                <li>  <i style="padding: 0px 10px 0px 10px" class="fa-solid fa-angle-right"></i><span>Our Gallery</span></li>
                             </ul><!-- /.mediox-breadcrumb list-unstyled -->
                         </div><!-- /.page-header__content -->
                     </div><!-- /.container -->
@@ -156,161 +195,145 @@
             </div><!-- /.container-fluid -->
         </section><!-- /.page-header -->
 
-        <section class="about-me section-space " style="margin-bottom: -300px;">
+        <section class="gallery-page section-space">
             <div class="container">
-                <div class="row gutter-y-60 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
-                        <div class="about-one__image">
-                            <div class="about-one__image__one">
-                                <img src="assets/images/backgrounds/1.jpeg" alt="about">
-                            </div><!-- /.about-one__image__one -->
-                            <div class="about-one__experience" style="background-image: url(assets/images/about/about-1-2.jpg);">
-                                <div class="about-one__experience__content">
-                                    <h3 class="about-one__experience__year">25+</h3>
-                                    <span class="about-one__experience__text"> Experience in <br> Spine Deformity <br> Surgery</span>
-                                </div><!-- /.about-one__experience__content -->
-                            </div><!-- /.about-one__experience -->
-                        </div><!-- /.about-one__image -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="about-one__content">
-                            <div class="sec-title @@extraClassName wow fadeInUp" data-wow-duration="1500ms">
-                                <div class="sec-title__top">
+                <div class="row gutter-y-30 fitRow-layout">
+                    <!-- Featured Videos -->
+              
+                    <div class="cb-content videolist">
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6 videoitem">
+                                <div class="b-video">
+                                    <div class="v-img">
+                                        <a href="single-video-tabs.html"><img src="im" alt="" loading="lazy" decoding="async"></a>
+                                        <div class="time">3:50</div>
+                                    </div>
+                                    <div class="v-desc">
+                                        <a href="single-video-tabs.html">Man's Sky: 21 Minutes of New Gameplay - IGN First</a>
+                                    </div>
+                                    <div class="v-views">
+                                        27,548 views. <span class="v-percent"><span class="v-circle"></span> 78%</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                                      <h6 class="sec-title__tagline">about Dr</h6><!-- /.sec-title__tagline -->
+                            <div class="col-lg-3 col-sm-6 videoitem">
+                                <div class="b-video">
+                                    <div class="v-img">
+                                        <a href="single-video-tabs.html"><img src="images/video1-2.png" alt="" loading="lazy" decoding="async"></a>
+                                        <div class="time">15:19</div>
+                                    </div>
+                                    <div class="v-desc">
+                                        <a href="single-video-tabs.html">GTA 5: Michael, Franklin, and Trevor in the Flesh</a>
+                                    </div>
+                                    <div class="v-views">
+                                        8,241,542 views. <span class="v-percent"><span class="v-circle"></span> 93%</span>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-lg-3 col-sm-6 videoitem">
+                                <div class="b-video">
+                                    <div class="v-img">
+                                        <a href="single-video-tabs.html"><img src="images/video1-3.png" alt="" loading="lazy" decoding="async"></a>
+                                        <div class="time">4:23</div>
+                                    </div>
+                                    <div class="v-desc">
+                                        <a href="single-video-tabs.html">Battlefield 3: Official Fault Line Gameplay Trailer</a>
+                                    </div>
+                                    <div class="v-views">
+                                        2,729,347 views . <span class="v-percent"><span class="v-circle"></span> 95%</span>
+                                    </div>
+                                </div>
+                            </div>
 
-                                </div><!-- /.sec-title__top -->
-                                <h3 class="sec-title__title">Professor Hany Abdel Gawwad – Spine Deformity Surgery.</h3><!-- /.sec-title__title -->
-                            </div><!-- /.sec-title -->
-                            <div class="about-one__text-box wow fadeInUp" data-wow-duration="1500ms">
-                              
-                                <p class="about-one__text">
+                            <div class="col-lg-3 col-sm-6 videoitem">
+                                <div class="b-video">
+                                    <div class="v-img">
+                                        <a href="single-video-tabs.html"><img src="images/video1-4.png" alt="" loading="lazy" decoding="async"></a>
+                                        <div class="time">7:18</div>
+                                    </div>
+                                    <div class="v-desc">
+                                        <a href="single-video-tabs.html">Batman Arkham City: Hugo Strange Trailer</a>
+                                    </div>
+                                    <div class="v-views">
+                                        7,239,852 views. <span class="v-percent"><span class="v-circle"></span> 84%</span>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-lg-3 col-sm-6 videoitem">
+                                <div class="b-video last-row">
+                                    <div class="v-img">
+                                        <a href="single-video-tabs.html"><img src="images/video1-5.png" alt="" loading="lazy" decoding="async"></a>
+                                        <div class="time">23:57</div>
+                                    </div>
+                                    <div class="v-desc">
+                                        <a href="single-video-tabs.html">BATTALION 1944: TAKING ON BATTLEFIELD 5</a>
+                                    </div>
+                                    <div class="v-views">
+                                        19,130 views. <span class="v-percent"><span class="v-circle"></span> 78%</span>
+                                    </div>
+                                </div>
+                            </div>
 
-Professor Hany Abdel Gawwad Soliman is a world-renowned spine deformity surgeon and Professor of Orthopedic Spine Surgery, internationally recognized for his expertise in the evaluation and surgical correction of complex spinal deformities in both children and adults.
-</p>
-                            </div><!-- /.about-one__text-box -->
-                            <div class="about-one__inner wow fadeInUp" data-wow-duration="1500ms">
-                                <div class="about-one__inner__row row gutter-y-30">
-                                    <div class="col-6">
-                                        <div class="about-one__funfact">
-                                            <h3 class="about-one__funfact__number count-box">
-                                                <span class="count-text" data-stop="89" data-speed="1500"></span>
-                                                <span>%</span>
-                                            </h3>
-                                            <h4 class="about-one__funfact__title">Top Medical <br> Treatments</h4>
-                                        </div><!-- /.about-one__funfact -->
-                                    </div><!-- /.col-6 -->
-                                    <div class="col-6">
-                                        <div class="about-one__funfact">
-                                            <h3 class="about-one__funfact__number count-box">
-                                                <span class="count-text" data-stop="100" data-speed="1500"></span>
-                                                <span>%</span>
-                                            </h3>
-                                            <h4 class="about-one__funfact__title">Satisficed <br> Patient</h4>
-                                        </div><!-- /.about-one__funfact -->
-                                    </div><!-- /.col-6 -->
-                                </div><!-- /.about-one__inner__row row gutter-y-30 -->
-                            </div><!-- /.about-one__inner -->
-                            
-                        </div><!-- /.about-one__content -->
-                    </div><!-- /.col-lg-6 -->
+                            <div class="col-lg-3 col-sm-6 videoitem">
+                                <div class="b-video last-row">
+                                    <div class="v-img">
+                                        <a href="single-video-tabs.html">
+                                            <img src="images/video1-6.png" alt="" loading="lazy" decoding="async">
+                                            <div class="watched-mask"></div>
+                                            <div class="watched">WATCHED</div>
+                                            <div class="time">7:27</div>
+                                        </a>
+                                    </div>
+                                    <div class="v-desc">
+                                        <a href="single-video-tabs.html">Amazon Blocking VIDEO GAMES for Non-Prime...</a>
+                                    </div>
+                                    <div class="v-views">
+                                        185,525 views. <span class="v-percent"><span class="v-circle"></span> 93%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 videoitem">
+                                <div class="b-video last-row">
+                                    <div class="v-img">
+                                        <a href="single-video-tabs.html"><img src="images/video1-7.png" alt="" loading="lazy" decoding="async"></a>
+                                        <div class="time">12:58</div>
+                                    </div>
+                                    <div class="v-desc">
+                                        <a href="single-video-tabs.html">Amazing Facts About Nebulas Inside Deep Universe</a>
+                                    </div>
+                                    <div class="v-views">
+                                        203,741 views. <span class="v-percent"><span class="v-circle"></span> 95%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-6 videoitem">
+                                <div class="b-video last-row">
+                                    <div class="v-img">
+                                        <a href="single-video-tabs.html"><img src="images/video1-8.png" alt="" loading="lazy" decoding="async"></a>
+                                        <div class="time">9:47</div>
+                                    </div>
+                                    <div class="v-desc">
+                                        <a href="single-video-tabs.html">Cornfield Chase - Outlast II Official Gameplay</a>
+                                    </div>
+                                    <div class="v-views">
+                                        202,513 views. <span class="v-percent"><span class="v-circle"></span> 84%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Featured Videos -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
-        </section><!-- /.about-one section-space -->
+        </section><!-- /.gallery-page section-space -->
 
-        <section class="skills-one skills-one--about " style="padding-bottom: 50px;">
-            <div class="container">
-                <div class="row gutter-y-50 align-items-center">
-                    <div class="col-lg-6">
-                        <div class="skills-one__content">
-                            <div class="sec-title @@extraClassName wow fadeInUp" data-wow-duration="1500ms">
-                       
-                                <h3 class="sec-title__title">Dr Hany Abdel Gawwad</h3><!-- /.sec-title__title -->
-                            </div><!-- /.sec-title -->
-                            <div class="skills-one__text-box wow fadeInUp" data-wow-duration="1500ms">
-                                <p class="skills-one__text">
-                                    
-With extensive experience in treating scoliosis, kyphosis, congenital spinal deformities, and complex revision spine surgery, Professor Abdel Gawwad is particularly known for managing cases that are often considered high-risk or inoperable. His work has transformed the lives of thousands of patients suffering from severe, neglected, or complex spinal conditions—restoring not only spinal alignment, but also confidence, mobility, and overall quality of life.
-Professor Abdel Gawwad completed advanced fellowship training in adult and pediatric spine surgery at the University of Montreal, Canada, where he developed deep expertise in modern deformity correction techniques, spinal osteotomies, and advanced surgical strategies. He currently serves as Professor of Orthopedic Surgery at the Al-Azhar University, Cairo, and practices across leading medical centers in Egypt, the United Arab Emirates, and Kuwait.
-<br><br>
-Renowned for combining scientific precision with genuine human compassion, Professor Abdel Gawwad adopts a patient-centered approach, carefully tailoring each treatment plan to the individual patient’s anatomy, age, functional needs, and life goals. His surgical philosophy emphasizes maximum correction with maximum safety, supported by state-of-the-art technology and meticulous preoperative planning for every single patient.
-<br><br>
-His work has earned him widespread recognition among both patients and medical professionals, and he is often described as a surgeon who restores hope where others see limits.
-<br><br>
-This website is dedicated to sharing his vision, expertise, and outcomes in spine deformity correction—offering patients and families a trusted destination for knowledge, care, and transformation.
- <br><br>
- </p>
-                            </div><!-- /.skills-one__text-box -->
-                        </div><!-- /.skills-one__content -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6 wow fadeInRight" data-wow-duration="1500ms">
-                        <div class="skills-one__image">
-                               <img src="assets/images/backgrounds/1.jpeg" alt="we are skillful health care" class="sec-title__img">
-
-
-                            <div class="skills-one__award">
-                                <span class="skills-one__award__text">DR  Hany <br><span style="font-size: 13.5px;">Abdel Gawwad</span></span><!-- /.skills-one__award__text -->
-                            </div><!-- /.skills-one__award -->
-                        </div><!-- /.skills-one__image -->
-                    </div><!-- /.col-lg-6 -->
-                </div><!-- /.row gutter-y-50 -->
-            </div><!-- /.container -->
-        </section><!-- /.skills-one section-space -->
-
-
-          <section class="about-me section-space-p">
-            <div class="container">
-                <div class="row gutter-y-60 align-items-center">
-                    <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms">
-                        <div class="about-one__image">
-                            <div class="about-one__image__one">
-                                <img src="assets/images/backgrounds/1.jpeg" alt="about">
-                            </div><!-- /.about-one__image__one -->
-                            <div class="about-one__experience" style="background-image: url(assets/images/about/about-1-2.jpg);">
-                                <div class="about-one__experience__content">
-                                    <h3 class="about-one__experience__year">25+</h3>
-                                    <span class="about-one__experience__text">Experience in <br> Spine Deformities <br> Surgery</span>
-                                </div><!-- /.about-one__experience__content -->
-                            </div><!-- /.about-one__experience -->
-                        </div><!-- /.about-one__image -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                        <div class="about-one__content">
-                            <div class="sec-title @@extraClassName wow fadeInUp" data-wow-duration="1500ms">
-             
-                                <h3 class="sec-title__title">SPECIALTIES & EXPERTISE</h3><!-- /.sec-title__title -->
-                            </div><!-- /.sec-title -->
-                            <div class="about-one__text-box wow fadeInUp" data-wow-duration="1500ms">
-                              
-                                <p class="about-one__text">
-
-
-
-<ol>
-    <li>
-Scoliosis <br></li>
-<li>Kyphosis<br></li>
-<li>Complex Spine Surgery<br></li>
-<li>Congenital Spinal Malformation<br></li><li>
-Degenerative Scoliosis<br></li><li>
-Neuromuscular Scoliosis<br></li><li>
-Pediatric Spine Deformities<br></li><li>
-Pediatric Spine Surgery<br></li><li>
-Adult spine surgey<br></li><li>
-Spine deformity<br></li>
-</ol>
-</p>
-                            </div><!-- /.about-one__text-box -->
-                      
-                            
-                        </div><!-- /.about-one__content -->
-                    </div><!-- /.col-lg-6 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section><!-- /.about-one section-space -->
-
+   
         <footer class="main-footer section-space-top">
             <div class="main-footer__bg" style="background-image: url(assets/images/hany/logo/Dr.Hany-Abdelgawad.png);">
             </div>
@@ -323,7 +346,7 @@ Spine deformity<br></li>
                             <div class="footer-widget__logo logo-retina">
                                 <a href="index.html">
                                     <img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" alt="Mediox HTML"
-                                        width="164">
+                                        width="164" loading="lazy" decoding="async">
                                 </a>
                             </div><!-- /.footer-widget__logo -->
                             <p class="footer-widget__about-text">Morem Ipsum Dolor Sit Amet, Consectetur Adipiscing
@@ -412,7 +435,7 @@ Spine deformity<br></li>
                                         <p class="main-footer__contact__title">send email</p>
                                         <h4 class="main-footer__contact__text">
                                             <i class="fa-solid fa-location-dot"></i>
-                                            <a href="mailto:info@gmail.com">Be@gmail.com</a>
+                                            <a href="/cdn-cgi/l/email-protection#2d44434b426d4a404c4441034e4240"><span class="__cf_email__" data-cfemail="c88aad88afa5a9a1a4e6aba7a5">[email&#160;protected]</span></a>
                                         </h4>
                                     </div><!-- /.main-footer__contact__content -->
                                 </div><!-- /.main-footer__contact -->
@@ -448,7 +471,7 @@ Spine deformity<br></li>
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa-solid fa-circle-xmark"></i></span>
 
             <div class="logo-box logo-retina">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png"" width="164" alt="" /></a>
+                <a href="index.html" aria-label="logo image"><img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png"" width="164" alt="" / loading="lazy" decoding="async"></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -459,7 +482,7 @@ Spine deformity<br></li>
                     <span class="mobile-nav__contact__icon">
                         <i class="fa fa-envelope"></i>
                     </span>
-                    <a href="mailto:Be@gmail.com">Be@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#82c0e7c2e5efe3ebeeace1edef"><span class="__cf_email__" data-cfemail="60220520070d01090c4e030f0d">[email&#160;protected]</span></a>
                 </li>
                 <li>
                     <span class="mobile-nav__contact__icon">
@@ -504,12 +527,12 @@ Spine deformity<br></li>
         <!-- /.search-popup__content -->
     </div>
     <!-- /.search-popup -->
-    <aside class="sidebar-one">
+        <aside class="sidebar-one">
         <div class="sidebar-one__overlay sidebar-btn__toggler"></div><!-- /.siderbar-ovarlay -->
         <div class="sidebar-one__content">
             <span class="sidebar-one__close sidebar-btn__toggler"><i class="fa-solid fa-circle-xmark"></i></span>
             <div class="sidebar-one__logo sidebar-one__item logo-retina">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" width="164" alt="logo" />
+                <a href="index.html" aria-label="logo image"><img src="assets/images/hany/logo/Dr.Hany-Abdelgawad.png" width="164" alt="logo" / loading="lazy" decoding="async">
                 </a>
             </div><!-- /.sidebar-one__logo -->
             <div class="sidebar-one__about sidebar-one__item">
@@ -529,7 +552,7 @@ Spine deformity<br></li>
                         <span class="sidebar-one__info__icon">
                               <i class="fa fa-envelope"></i>
                         </span>
-                        <a href="mailto:Be@gmail.com">Be@gmail.com</a>
+                        <a href="/cdn-cgi/l/email-protection#7a381f3a1d171b131654191517"><span class="__cf_email__" data-cfemail="7a381f3a1d171b131654191517">[email&#160;protected]</span></a>
                     </li>
                     <li>
                         <span class="sidebar-one__info__icon">
@@ -567,34 +590,25 @@ Spine deformity<br></li>
             </div><!-- /.sidebar-one__form -->
         </div><!-- /.sidebar__content -->
     </aside><!-- /.sidebar-one -->
+
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
         <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
     </a>
 
-    <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendors/tiny-slider/tiny-slider.js"></script>
-    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="assets/vendors/slick/js/slick.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/imagesloaded/imagesloaded.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
-    <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
-    <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
-    <!-- template js -->
-    <script src="assets/js/style.js"></script>
-</body>
-
-</html>
+    <script async data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
+    <script defer src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script defer src="assets/vendors/jarallax/jarallax.min.js"></script>
+    <script defer src="assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script defer src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script defer src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script defer src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script defer src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script defer src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script defer src="assets/vendors/nouislider/nouislider.min.js"></script>
+    <script defer src="assets/vendors/tiny-slider/tiny-slider.js"></script>
+    <script defer src="assets/vendors/wnumb/wNumb.min.js"></script>
+    <script defer src="assets/vendors/owl-carousel/js/owl.carousel.min.js"></script>
+    <script defer src="assets/vendors/slick/js/slick.min.js"></script>
+    <script defer src="assets/vendors/wow/wow.js"></script>
