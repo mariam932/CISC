@@ -16741,5 +16741,9 @@ margin-bottom: -220px;
         transform: translateY(-21px);
     }
 }
+.video-container {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
 
 /*# sourceMappingURL=mediox.css.map */
